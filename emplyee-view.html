@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Employer View</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+	<header>
+		<div class="header-left">
+			<img src="logo.png"/><h3>Lawn Mower Hub</h3>
+		</div>
+      <div class="buttons">
+        <a data-toggle="modal" data-target="#login">LOGIN</a>
+		<a data-toggle="modal" data-target="#register">REGISTER</a>
+      </div>	
+    </header>
+	<section class="home-wrapper">
+    <section class="row">
+		<section class="emp-view col-lg-5">
+			<div class="table-responsive">
+			  <table class="table table-bordered table-striped">
+				<thead> 
+					<tr> 
+						<th>Loaction</th> 
+						<th>Estimated Duration</th> 
+						<th>Salary</th> 
+						<th>Availability</th> 
+					</tr> 
+				</thead> 
+				<tbody> 
+					<tr data-toggle="modal" data-target="#myModal"> 
+						<td>Kiel</td> 
+						<td>5 hours</td> 
+						<td>50 Euros</td> 
+						<td>15-17 April</td> 
+					</tr> 
+					<tr> 
+						<td>Kiel</td> 
+						<td>1 hours</td> 
+						<td>20 Euros</td> 
+						<td>10-15 April</td>  
+					</tr> 
+					<tr> 
+						<td>Kiel</td> 
+						<td>5 hours</td> 
+						<td>60 Euros</td> 
+						<td>15-17 April</td>  
+					</tr>
+					<tr> 
+						<td>Kiel</td> 
+						<td>5 hours</td> 
+						<td>50 Euros</td> 
+						<td>15-17 April</td> 
+					</tr> 
+					<tr> 
+						<td>Kiel</td> 
+						<td>1 hours</td> 
+						<td>20 Euros</td> 
+						<td>10-15 April</td>  
+					</tr> 
+					<tr> 
+						<td>Kiel</td> 
+						<td>5 hours</td> 
+						<td>60 Euros</td> 
+						<td>15-17 April</td>  
+					</tr>
+				</tbody> 
+			  </table>
+			</div>
+		</section> 
+		<section class="emp-view map-view col-lg-offset-1 col-lg-5">
+			<div id="map"></div>
+		</section>
+	</section>
+	</section>
+	<!-- Button trigger modal -->
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">Job Details</h4>
+		  </div>
+		  <div class="modal-body">
+			<p>Langensaal 43, 24149 Kiel</p>
+			<p>Employer email id : abc@abc.com<p>
+			<p>Date : 15th-17th April</p>
+			<p>Payment : 50 Euros</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary" onclick="myFunction()">Apply for Job</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">Register</h4>
+		  </div>
+		  <div class="modal-body">
+			<form>
+		  <div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+			<label for="Username">Username</label>
+			<input type="text" class="form-control" id="Username" placeholder="Username">
+		  </div>
+		  <div class="form-group">
+			<label for="Password">Password</label>
+			<input type="password" class="form-control" id="Password" placeholder="Password">
+		  </div>
+		  <div class="form-group">
+			<label for="confirmPassword">Confirm Password</label>
+			<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+		  </div>
+		</form>
+		  </div>
+		  <div class="modal-footer" style="text-align:center;">
+			<h4>I want to</h4>
+			  <a type="submit" class="btn btn-default" href="employer-register.html">Hire</a>
+			  <a type="submit" class="btn btn-default" href="employee-register.html">Work</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">Login</h4>
+		  </div>
+		  <div class="modal-body">
+			<form>
+		  <div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+			<label for="Username">Username</label>
+			<input type="text" class="form-control" id="Username" placeholder="Username">
+		  </div>
+		  <div class="form-group">
+			<label for="Password">Password</label>
+			<input type="password" class="form-control" id="Password" placeholder="Password">
+		  </div>
+		  <div class="form-group">
+			<label for="confirmPassword">Confirm Password</label>
+			<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+		  </div>
+		</form>
+		  </div>
+		  <div class="modal-footer" style="text-align:center;">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<a type="submit" class="btn btn-primary" href="employer-work-details.html">Login</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<script>
+      function initMap() {
+        var uluru = {lat: 54.32133, lng: 10.13489};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWfq_jYjVphy7iZ5Kc9_QaKeEboGQFOXk&callback=initMap">
+    </script>
+	<script>
+		function myFunction() {
+			alert("Please Login before Applying!");
+		}
+	</script>
+	
+  </body>
+  
+</html>
