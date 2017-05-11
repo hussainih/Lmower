@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">PHP-JWT</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form method="post" class="navbar-form navbar-right" id="frmLogin" role="form">
+            <div class="form-group">
+              <input name="username" type="text" class="form-control" id="username" placeholder="User Name">
+            </div>
+            <div class="form-group">
+              <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <p>Please sign in using the form on the top-right of your screen.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Current JWT</h2>
+          <p id="token" class="code">&nbsp;</p>
+          <p><a href="#" class="btn btn-default" id="btnExpire" role="button">Expire Token &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Decoded JWT</h2>
+          <p><pre id="decodedToken">&nbsp;</pre></p>
+          <table border="0" cellpadding="3" cellspacing="1" class="table">
+          <tr>
+        <td><strong>Current time:</strong></td>
+        <td align="right"><span id="currentTime">&nbsp;</span></td>
+    </tr>
+    <tr>
+        <td><strong>Issued at:</strong></td>
+        <td align="right"><span id="iat">&nbsp;</span></td>
+    </tr>
+    <tr>
+        <td><strong>Not valid before:</strong></td>
+        <td align="right"><div id="nbf">&nbsp;</div></td>
+    </tr>
+    <tr>
+        <td><strong>Expires:</strong></td>
+        <td align="right"><div id="exp">&nbsp;</div></td>
+    </tr>
+</table>
+        </div>
+        <div class="col-md-4">
+          <h2>Resource</h2>
+          <p><a href="#" class="btn btn-default" id="btnGetResource" role="button">Get resource &raquo;</a></p>
+          <p class="resourceContainer" id="resourceContainer">&nbsp;</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2014</p>
+      </footer>
+    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/vendor/jsrsasign-4.1.4-all-min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
