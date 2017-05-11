@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+.code {
+	border-color:#339;
+	border-width:thin;
+	border-style:dashed;
+	width:100%;
+	background-color:#DBE2EE;
+	word-wrap:break-word;
+	font-family:'Courier New', Courier, monospace;
+	padding:5px;
+}
+
+.resourceContainer {
+	width:200px;
+	height:300px;
+	background-color:#CCC;
+	margin:auto;
+}

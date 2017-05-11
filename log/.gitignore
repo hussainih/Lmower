@@ -1,0 +1,5 @@
+/vendor/
+/.c9/
+php.ini
+.idea/
+php_errors.log
