@@ -1,26 +1,15 @@
-
 <?php
+use \Psr\Http\Message\ServerRequestInterface as Request;
+use \Psr\Http\Message\ResponseInterface as Response;
 
 require 'vendor/autoload.php';
-$app = new Slim\App();
-$app->get('/books', function() {
 
- //require_once('db.php');
+$app = new \Slim\App;
+$app->get('/hello/{name}', function (Request $request, Response $response) {
+    $name = $request->getAttribute('name');
+    $response->getBody()->write("Hello, $name");
 
- //$query = "select * from library order by book_id";
-
- //$result = $connection->query($query);
-
- // var_dump($result);
-
- //while ($row = $result->fetch_assoc()){
-
-//$data[] = $row;
-
- //}
-
- echo json_encode("hello there");
-
+    return $response;
 });
-?>
+$app->run();
 
