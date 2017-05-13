@@ -13,7 +13,7 @@ $app->get('/hello/{name}', function (Request $request, Response $response) {
 });
 
 $app->get('/ads/s', function (Request $request, Response $response) {
-    require_once(dbconnect.php);
+    $mysqli = new mysqli("lmower.ck1dzexlod8f.us-west-2.rds.amazonaws.com:3306", "lmower", "lmowerpassword", "lmower");
     $query = "select * from ads";
     $result = $mysqli->query($query);
 
