@@ -1,5 +1,5 @@
 <?php
-$host = "ck1dzexlod8f.us-west-2.rds.amazonaws.com:3306";
+$host = "35.165.250.222:3306";
 $user = "lmower";
 $pass = "lmowerpassword";
 $db_name = "lmower";
