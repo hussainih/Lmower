@@ -27,5 +27,26 @@ $app->get('/ads/s', function (Request $request, Response $response) {
 });
 
 
+$app->get('/ads/a', function (Request $request, Response $response) {
+
+$link = mysqli_connect('lmower.ck1dzexlod8f.us-west-2.rds.amazonaws.com', 'lmower', 'lmowerpassword', 'lmower', '3306');
+
+/* check connection */
+
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
+if (!mysqli_query($link, "SET a=1")) {
+    printf("Errormessage: %s\n", mysqli_error($link));
+}
+
+/* close connection */
+mysqli_close($link);
+
+});
+
+
 $app->run();
 
