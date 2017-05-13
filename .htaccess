@@ -1,3 +1,4 @@
+RewriteEngine On
 RewriteCond %{Request_Filename} !-F
 RewriteCond %{Request_Filename} !-d
 RewriteRule ^ rest.php [QSA,L]
