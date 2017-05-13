@@ -20,8 +20,8 @@ $app->get('/ads', function (Request $request, Response $response) {
     while($row = $result->fetch_assoc()){
         $data[] = $row;
     }
-    //echo json_encode($data);
-echo "you are getting something";
+    return json_encode($data);
+
 
 
 });
