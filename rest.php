@@ -11,5 +11,21 @@ $app->get('/hello/{name}', function (Request $request, Response $response) {
 
     return $response;
 });
+
+$app->get('/ads', function (Request $request, Response $response) {
+    require_once(dbconnect.php);
+    $query = "select * from ads";
+    $result = $mysqli->query($query);
+
+    while($row = $result->fetch_assoc()){
+        $data[] = $row;
+    }
+    echo json_encode($data);
+
+
+
+});
+
+
 $app->run();
 
